@@ -5,6 +5,7 @@ const App = () => {
   const [result, setResult] = useState("");
 
   const handleClick = (e) => {
+    if(result.length && result.charAt(result.length-1) != e.target.name || result.length == 0)
     setResult(result.concat(e.target.name));
   }
 
